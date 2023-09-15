@@ -59,13 +59,13 @@ loom {
 tasks {
     jar {
         manifest.attributes(
-                mapOf(
-                        "ModSide" to "CLIENT",
-                        "TweakOrder" to "0",
-                        "ForceLoadAsMod" to true,
-                        "TweakClass" to "cc.polyfrost.oneconfig.loader.stage0.LaunchWrapperTweaker",
-                        "MixinConfigs" to "mixins.movementrecorder.json"
-                )
+            mapOf(
+                "ModSide" to "CLIENT",
+                "TweakOrder" to "0",
+                "ForceLoadAsMod" to true,
+                "TweakClass" to "cc.polyfrost.oneconfig.loader.stage0.LaunchWrapperTweaker",
+                "MixinConfigs" to "mixins.movementrecorder.json",
+            ),
         )
         dependsOn(shadowJar)
     }
@@ -94,7 +94,6 @@ tasks {
             project.file("build/libs/MovementRecorder-$version-all.jar").delete()
         }
     }
-
 }
 
 java {
